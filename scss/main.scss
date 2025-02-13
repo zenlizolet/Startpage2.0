@@ -43,7 +43,10 @@ body {
     height: 100vh;
   }
 }
-
+.slideout-menu{
+  position:fixed;
+  color:$purple
+}
 .main {
   width: 100%;
   text-align: center;

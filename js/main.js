@@ -1,5 +1,3 @@
-import marked from 'marked';
-
 window.onload = function() {
     this.populateVersionInSettings();
     this.initBody();
@@ -81,10 +79,18 @@ function addSlideoutMenu() {
 
     openMenuBtn.addEventListener('click', function() {
         slideoutMenu.classList.add('open');
+        slideoutMenu.style.width = '75%'; 
+        slideoutMenu.style.background = '#313131';
+        slideoutMenu.style.position = 'fixed';
+        slideoutMenu.style.right = '0px';
+        slideoutMenu.style.top = '1%';
+        slideoutMenu.style.bottom = '1%';
+        slideoutMenu.style.borderRadius = '20px 0px 0px  20px';
+        slideoutMenu.style.padding  = '20px';   
         loadMarkdownContent();
     });
 
-    closeMenuBtn.addEventListener('click', function() {
+    closeMenuBtn.addEventListener('click', function() { 
         slideoutMenu.classList.remove('open');
     });
 
