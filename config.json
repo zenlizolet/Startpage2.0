@@ -1,0 +1,120 @@
+{
+  "squares": [
+    { "name": "Media",
+      "color": "#E06C75",
+      "links": [
+        { "name": "Spotify", "url": "https://open.spotify.com/" },
+        { "name": "Netflix", "url": "https://netflix.com" },
+        { "name": "Youtube", "url": "https://youtube.com" },
+        { "name": "HBO", "url": "https://hbo.max.com/nl/nl" },
+        { "name": "Videoland", "url": "https://www.videoland.com/nl/" },
+        { "name": "Prime", "url": "https://www.primevideo.com/" }	
+      ]
+    },
+    { "name": "Work & School",
+      "color": "#E5C07B",
+      "links": [
+        { "name": "Github", "url": "https://github.com" },
+        { "name": "Blackboard", "url": "https://uu.blackboard.com/ultra/course" },
+        { "name": "Talen en Compilers", "url": "https://ics-websites.science.uu.nl/docs/vakken/b3tc/index.html" },
+        { "name": "NotebookLM", "url":  "https://notebooklm.google.com/"},
+        { "name": "Stackoverflow", "url": "https://stackoverflow.com" },
+        { "name": "Google Scholar", "url": "https://scholar.google.com" },
+        { "name": "localhost", "url": "http://localhost:8000/" }
+      ]
+    },
+    { "name": "Social",
+      "color": "#98C379",
+      "links": [
+        { "name": "Reddit", "url": "https://reddit.com" },
+        { "name": "Instagram", "url": "https://instagram.com" },
+        { "name": "Discord", "url": "https://discord.com" },
+        { "name": "Twitter", "url": "https://twitter.com" }
+      ]
+    },
+    {
+      "name": "Others & AI",
+      "color": "#61AFEF",
+      "links": [
+        { "name": "Gmail", "url": "http://gmail.com/"},
+        { "name": "Google Drive", "url": "https://drive.google.com" },
+        { "name": "ChatGPT", "url": "https://chatgpt.com/"},
+        { "name": "Gemini", "url" : "https://gemini.google.com/app?hl=nl" },
+        { "name": "DeepSeek", "url": "https://chat.deepseek.com/"},
+        { "name": "Krea", "url": "https://www.krea.ai/"},
+        { "name": "Wikipedia", "url": "https://wikipedia.org"}
+      ]
+    },
+    {
+      "name": "Research & OSINT",
+      "color": "#C678DD",
+      "links": [
+        {"name": "OSINT Framework", "url": "https://osintframework.com/"},
+        {"name": "Have I Been Pwned", "url": "https://haveibeenpwned.com/"},
+        {"name": "Google Search", "url": "https://google.com"},
+        {"name" : "Yandex" , "url": "https://yandex.com"},
+        {"name": "Bing", "url": "https://bing.com"},
+        {"name": "Google Images", "url": "https://images.google.com"},
+        {"name": "ExploitDB", "url": "https://www.exploit-db.com/"},
+        {"name": "The Wayback Machine", "url": "https://archive.org/web/"},
+        {"name": "Nationaal Archief", "url": "https://www.nationaalarchief.nl/"},
+        {"name": "Blockchain", "url": "https://blockchain.com"}
+        ]
+    },
+    {
+      "name": "Geolocation & Maps",
+      "color": "#56B6C2",
+      "links": [
+        {"name": "Google Maps", "url": "https://maps.google.com"},
+        {"name": "OpenStreetMap", "url": "https://www.openstreetmap.org/#map=12/51.9731/5.9223"},
+        {"name": "Overpass turbo", "url": "https://overpass-turbo.eu/"},
+        {"name": "pdok", "url": "https://www.pdok.nl/"},
+        {"name": "Yandex Maps", "url": "https://yandex.com/maps"},
+        {"name": "Apple Maps", "url ": "https://beta.maps.apple.com"}
+      ]
+    }
+  ],
+  "linkInNewTab": true,
+  "title": "Startpagina <3",
+  "searchEngine":"DuckDuckGo",
+  "user": "Liselot",
+  "disableMessage": false,
+  "disableDate": false,
+  "disableSearchBar": false,
+  "disable24Hour": false,
+  "disableWeather": false,
+  "timeZone": "Europe/Amsterdam",
+  "weatherConf": {
+    "location": "Arnhem",
+    "unit": "cel"
+  },
+  "settingsIcon": true,
+  "style": {
+    "backgroundColor": "#212121",
+    "messageColor": "#fff",
+    "dateColor": "#d9d9d9",
+    "lineColor": "#fff",
+    "weatherColor": "#d9d9d9",
+    "searchColor": "#fff",
+    "searchBackgroundColor": "#2e2e2e",
+    "squareColor": "#9e9e9e",
+    "squareBackgroundColor": "#2e2e2e",
+    "autocompleteHighlightBackgroundColor": "#3B3B3B"
+  },
+  "quickLinks": {
+    "r": "https://reddit.com",
+    "g": "https://github.com",
+    "y": "https://youtube.com",
+    "d": {
+      "URL": "https://duckduckgo.com",
+      "Search": "/?q="
+    },
+    "b": "https://bing.com",
+    "p": "https://startpage.com",
+    "s": "https://stackoverflow.com",
+    "w": {
+      "URL":"https://wikipedia.org/wiki",
+      "Search": "/Special:Search?search="
+    }
+  }
+}
