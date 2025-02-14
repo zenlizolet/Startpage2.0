@@ -8,7 +8,6 @@
 
 .jetbrains-mono, body {
   font-family: "JetBrains Mono"; }
-
 body {
   height: 97.5vh;
   display: flex;
@@ -202,3 +201,69 @@ body {
     fill: white;
     stroke: white;
     transition: 2s ease-in; }
+
+
+/* Overlay-stijl */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    max-width: 80vw;
+    min-width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%);
+    z-index: 999;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    pointer-events: none; /* Zorg ervoor dat de overlay geen interactie heeft met de rest van de pagina */
+    overflow: hidden; /* Voorkom dat de overlay de rest van de pagina beïnvloedt */
+}
+
+/* Wanneer de overlay open is */
+.overlay.open {
+    transform: translateX(0);
+    pointer-events: auto; /* Zorg ervoor dat de overlay interactie heeft wanneer deze open is */
+}
+
+/* Inhoud van de overlay */
+.overlay-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Zorg ervoor dat de inhoud horizontaal wordt uitgelijnd */
+}
+
+/* Navigatie rechts */
+.overlay-content #catalog-content {
+    width: 300px; /* Vaste breedte */
+    height: 100%;
+    overflow-y: auto;
+    background-color: #00bfff;
+    padding: 10px;
+}
+
+/* Inhoud links */
+.overlay-content #content-div {
+    flex-grow: 1; /* Neemt de resterende ruimte in */
+    padding: 20px;
+    background-color: #ff0000;
+    color: white;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Sluitknop */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
