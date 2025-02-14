@@ -62,7 +62,7 @@ function initBody() {
         return;
     }
 
-    addSlideoutMenu();
+    //addSlideoutMenu();
     
 
     // Read the json file
@@ -70,12 +70,12 @@ function initBody() {
         Object.keys(result).length == 0 ? readJSON("config.json") : parseAndCreate(result)
     })
 }
-
+/*
 function addSlideoutMenu() {
     const openMenuBtn = document.getElementById('open-menu');
     const closeMenuBtn = document.getElementById('close-menu');
     const slideoutMenu = document.getElementById('slideout-menu');
-    const markdownContent = document.getElementById('markdown-content');
+    const catalogContent = document.getElementById('markdown-content');
 
     openMenuBtn.addEventListener('click', function() {
         slideoutMenu.classList.add('open');
@@ -87,22 +87,16 @@ function addSlideoutMenu() {
         slideoutMenu.style.bottom = '1%';
         slideoutMenu.style.borderRadius = '20px 0px 0px  20px';
         slideoutMenu.style.padding  = '20px';   
-        loadMarkdownContent();
+        catalogContent.style.width = '100%';
+        catalogContent.style.height = '100%';
     });
 
     closeMenuBtn.addEventListener('click', function() { 
         slideoutMenu.classList.remove('open');
     });
-
-    function loadMarkdownContent() {
-        fetch('Sources.md')
-            .then(response => response.text())
-            .then(text => {
-                markdownContent.innerHTML = marked(text);
-            })
-            .catch(error => console.error('Error loading markdown:', error));
-    }
 }
+*/
+
 
 function initSearchBar(jsonData) {
     // Clear the search bar on load, just in case

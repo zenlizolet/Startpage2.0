@@ -55,19 +55,85 @@
         </svg>
     </div>
 
-    <div id="slideout-menu" class="slideout-menu">
-        <button id="open-menu" class="open-btn">open</button>
-        <button id="close-menu" class="close-btn">close</button>
-        <div id = "ToC" class="Toc">Table of contents</div>
-        <div id = "contents" class = "contents"> Hier moet de rest kill </div>
-        <div id="markdown-content"></div>
+    <style>
+
+        /* Knop om overlay te openen */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff00c8;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        /* Overlay-stijl */
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 75%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            transition: right 0.4s ease-in-out;
+            z-index: 999;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Inhoud van de overlay */
+        .overlay-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Iframe stijlen */
+        .overlay iframe {
+            width: 90%;
+            height: 90%;
+            border: none;
+        }
+
+        /* Sluitknop */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Toon overlay */
+        .overlay.open {
+            right: 0;
+        }
+    </style>
+
+    <button class="toggle-btn">Menu</button>
+
+    <div class="overlay" id="overlay">
+        <button class="close-btn">Sluiten</button>
+        <div class="overlay-content">
+            <iframe src="Catalog/index.html"></iframe>
+        </div>
     </div>
     
     
     <!--JSON Editor-->
     <script src="js/jsoneditor.min.js"></script>
     <!--Custom JS-->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src = "js/overlay.js"></script>
     <script src="js/version.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/autocomplete.js"></script>

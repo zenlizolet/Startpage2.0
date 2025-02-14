@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogus</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+    }
+    nav {
+      width: 250px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    main {
+      flex-grow: 1;
+      padding: 10px;
+    }
+    a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+  
+</head>
+<body>
+  <nav>
+    <a href="#" data-file="pages/general-search.html">General Search</a>
+    <a href="#" data-file="pages/main-national-search-engines.html">Main National Search Engines</a>
+    <a href="#" data-file="pages/meta-search.html">Meta Search</a>
+    <a href="#" data-file="pages/specialty-search-engines.html">Specialty Search Engines</a>
+    <a href="#" data-file="pages/similar-sites-search.html">Similar Sites Search</a>
+    <a href="#" data-file="pages/document-and-slides-search.html">Document and Slides Search</a>
+    <a href="#" data-file="pages/file-search.html">File Search</a>
+    <a href="#" data-file="pages/pastebins.html">Pastebins</a>
+    <a href="#" data-file="pages/code-search.html">Code Search</a>
+    <a href="#" data-file="pages/major-social-networks.html">Major Social Networks</a>
+    <a href="#" data-file="pages/real-time-search-social-media-search-and-general-social-media-tools.html">Real-Time Search, Social Media Search, and General Social Media Tools</a>
+    <a href="#" data-file="pages/social-media-tools.html">Social Media Tools</a>
+    <a class="sub-section" href="#" data-file="pages/twitter.html">Twitter</a>
+    <a class="sub-section" href="#" data-file="pages/facebook.html">Facebook</a>
+    <a class="sub-section" href="#" data-file="pages/instagram.html">Instagram</a>
+    <a class="sub-section" href="#" data-file="pages/pinterest.html">Pinterest</a>
+    <a class="sub-section" href="#" data-file="pages/reddit.html">Reddit</a>
+    <a class="sub-section" href="#" data-file="pages/vkontakte.html">VKontakte</a>
+    <a class="sub-section" href="#" data-file="pages/tumblr.html">Tumblr</a>
+    <a class="sub-section" href="#" data-file="pages/linkedin.html">LinkedIn</a>
+    <a class="sub-section" href="#" data-file="pages/telegram.html">Telegram</a>
+    <a class="sub-section" href="#" data-file="pages/steam.html">Steam</a>
+    <a href="#" data-file="pages/blog-search.html">Blog Search</a>
+    <a href="#" data-file="pages/forums-and-discussion-boards-search.html">Forums and Discussion Boards Search</a>
+    <a href="#" data-file="pages/username-check.html">Username Check</a>
+    <a href="#" data-file="pages/people-investigations.html">People Investigations</a>
+    <a href="#" data-file="pages/email-search-email-check.html">Email Search / Email Check</a>
+    <a href="#" data-file="pages/phone-number-research.html">Phone Number Research</a>
+    <a href="#" data-file="pages/vehicle-automobile-research.html">Vehicle / Automobile Research</a>
+    <a href="#" data-file="pages/expert-search.html">Expert Search</a>
+    <a href="#" data-file="pages/company-research.html">Company Research</a>
+    <a href="#" data-file="pages/job-search-resources.html">Job Search Resources</a>
+    <a href="#" data-file="pages/qa-sites.html">Q&A Sites</a>
+    <a href="#" data-file="pages/domain-and-ip-research.html">Domain and IP Research</a>
+    <a href="#" data-file="pages/keywords-discovery-and-research.html">Keywords Discovery and Research</a>
+    <a href="#" data-file="pages/web-history-and-website-capture.html">Web History and Website Capture</a>
+    <a href="#" data-file="pages/language-tools.html">Language Tools</a>
+    <a href="#" data-file="pages/image-search.html">Image Search</a>
+    <a href="#" data-file="pages/image-analysis.html">Image Analysis</a>
+    <a href="#" data-file="pages/video-search-and-other-video-tools.html">Video Search and Other Video Tools</a>
+    <a href="#" data-file="pages/academic-resources-and-grey-literature.html">Academic Resources and Grey Literature</a>
+    <a href="#" data-file="pages/geospatial-research-and-mapping-tools.html">Geospatial Research and Mapping Tools</a>
+    <a href="#" data-file="pages/news.html">News</a>
+    <a href="#" data-file="pages/news-digest-and-discovery-tools.html">News Digest and Discovery Tools</a>
+    <a href="#" data-file="pages/fact-checking.html">Fact Checking</a>
+    <a href="#" data-file="pages/data-and-statistics.html">Data and Statistics</a>
+    <a href="#" data-file="pages/web-monitoring.html">Web Monitoring</a>
+    <a href="#" data-file="pages/browsers.html">Browsers</a>
+    <a href="#" data-file="pages/offline-browsing.html">Offline Browsing</a>
+    <a href="#" data-file="pages/vpn-services.html">VPN Services</a>
+    <a href="#" data-file="pages/infographics-and-data-visualization.html">Infographics and Data Visualization</a>
+    <a href="#" data-file="pages/social-network-analysis.html">Social Network Analysis</a>
+    <a href="#" data-file="pages/privacy-and-encryption-tools.html">Privacy and Encryption Tools</a>
+    <a href="#" data-file="pages/dns.html">DNS</a>
+    <a href="#" data-file="pages/maritime.html">Maritime</a>
+    <a href="#" data-file="pages/other-tools.html">Other Tools</a>
+    <a href="#" data-file="pages/threat-intelligence.html">Threat Intelligence</a>
+    <a href="#" data-file="pages/osint-videos.html">OSINT Videos</a>
+    <a href="#" data-file="pages/osint-blogs.html">OSINT Blogs</a>
+    <a href="#" data-file="pages/other-resources.html">Other Resources</a>
+  </nav>
+  <main id="content">
+    <!-- Content will be loaded here -->
+  </main>
+  <script src="load.js"></script>
+</body>
+
+</html>
