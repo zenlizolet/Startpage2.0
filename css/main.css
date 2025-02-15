@@ -8,17 +8,12 @@
 
 .jetbrains-mono, body {
   font-family: "JetBrains Mono"; }
-body {
-  height: 97.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #212121;
-  color: #fff; }
-  @media screen and (max-height: 501px) {
-    body {
-      display: block;
-      height: 100vh; } }
+@media screen and (max-height: 501px) {
+  body {
+    display: block;
+    height: 100vh;
+  }
+}
 .main {
   width: 100%;
   text-align: center; }
@@ -203,67 +198,70 @@ body {
     transition: 2s ease-in; }
 
 
-/* Overlay-stijl */
+/* Algemene stijlen */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* Overlay zelf */
 .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: auto;
-    max-width: 80vw;
-    min-width: 300px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    transition: transform 0.4s ease-in-out;
-    transform: translateX(100%);
-    z-index: 999;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    pointer-events: none; /* Zorg ervoor dat de overlay geen interactie heeft met de rest van de pagina */
-    overflow: hidden; /* Voorkom dat de overlay de rest van de pagina beïnvloedt */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto; /* Laat de breedte afhangen van de inhoud */
+  max-width: 75%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%); /* Start buiten het scherm */
 }
 
-/* Wanneer de overlay open is */
+/* Actieve overlay (geopend) */
 .overlay.open {
-    transform: translateX(0);
-    pointer-events: auto; /* Zorg ervoor dat de overlay interactie heeft wanneer deze open is */
+  transform: translateX(0); /* Laat de overlay in beeld schuiven */
 }
 
-/* Inhoud van de overlay */
+/* Container voor de overlay-content */
 .overlay-content {
-    height: 100%;
-    display: flex;
-    flex-direction: row-reverse; /* Zorg ervoor dat de inhoud horizontaal wordt uitgelijnd */
+  display: flex;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Navigatie rechts */
-.overlay-content #catalog-content {
-    width: 300px; /* Vaste breedte */
-    height: 100%;
-    overflow-y: auto;
-    background-color: #00bfff;
-    padding: 10px;
+/* Sidebar met catalogus */
+#catalog-content {
+  min-width: 0px; /* Zorgt ervoor dat de catalogus een minimale breedte heeft */
+  background-color: #00bfff;
+  padding: 10px;
+  overflow-y: auto;
+  flex-shrink: 0;
 }
 
-/* Inhoud links */
-.overlay-content #content-div {
-    flex-grow: 1; /* Neemt de resterende ruimte in */
-    padding: 20px;
-    background-color: #ff0000;
-    color: white;
-    height: 100%;
-    overflow-y: auto;
+/* Hoofdcontent */
+#content-div {
+  min-width: 0px; /* Zorgt ervoor dat de content een minimale breedte heeft */
+  flex-grow: 1;
+  background-color: #ff0000;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
 }
 
-/* Sluitknop */
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+#slide_open{
+  position:fixed;
+  right: 0;
 }
