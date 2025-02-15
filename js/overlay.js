@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 fetch(`Catalog/${file}`) // Zorg dat het pad klopt naar jouw bestanden
                     .then(response => response.text())
                     .then(data => {
-                        let contentDiv = document.getElementById('content-div');
-                        if (!contentDiv) {
-                            contentDiv = document.createElement('div');
-                            contentDiv.id = 'content-div';
-                            document.getElementById('catalog-content').insertAdjacentElement('afterend', contentDiv);
+                        let contentMain = document.querySelector('.content-main');
+                        if (!contentMain) {
+                            contentMain = document.createElement('div');
+                            contentMain.classList.add('content-main');
+                            document.getElementById('content-div').appendChild(contentMain);
                         }
-                        contentDiv.innerHTML = data;
+                        contentMain.innerHTML = data;
                     })
                     .catch(error => console.error('Error loading content:', error));
             });

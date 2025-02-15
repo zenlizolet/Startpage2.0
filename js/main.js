@@ -70,33 +70,6 @@ function initBody() {
         Object.keys(result).length == 0 ? readJSON("config.json") : parseAndCreate(result)
     })
 }
-/*
-function addSlideoutMenu() {
-    const openMenuBtn = document.getElementById('open-menu');
-    const closeMenuBtn = document.getElementById('close-menu');
-    const slideoutMenu = document.getElementById('slideout-menu');
-    const catalogContent = document.getElementById('markdown-content');
-
-    openMenuBtn.addEventListener('click', function() {
-        slideoutMenu.classList.add('open');
-        slideoutMenu.style.width = '75%'; 
-        slideoutMenu.style.background = '#313131';
-        slideoutMenu.style.position = 'fixed';
-        slideoutMenu.style.right = '0px';
-        slideoutMenu.style.top = '1%';
-        slideoutMenu.style.bottom = '1%';
-        slideoutMenu.style.borderRadius = '20px 0px 0px  20px';
-        slideoutMenu.style.padding  = '20px';   
-        catalogContent.style.width = '100%';
-        catalogContent.style.height = '100%';
-    });
-
-    closeMenuBtn.addEventListener('click', function() { 
-        slideoutMenu.classList.remove('open');
-    });
-}
-*/
-
 
 function initSearchBar(jsonData) {
     // Clear the search bar on load, just in case

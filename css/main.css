@@ -245,7 +245,7 @@ body {
 /* Sidebar met catalogus */
 #catalog-content {
   min-width: 0px; /* Zorgt ervoor dat de catalogus een minimale breedte heeft */
-  background-color: #00bfff;
+  background-color: #3b3b3b;
   padding: 10px;
   overflow-y: auto;
   flex-shrink: 0;
@@ -255,13 +255,47 @@ body {
 #content-div {
   min-width: 0px; /* Zorgt ervoor dat de content een minimale breedte heeft */
   flex-grow: 1;
-  background-color: #ff0000;
+  background-color: #212121;
   padding: 20px;
   color: white;
   overflow-y: auto;
+  display:flex;
+  flex-direction: row;
+  padding-left: 0%;
+  border-radius: 6px 0px 0px 6px;
 }
 
 #slide_open{
   position:fixed;
-  right: 0;
+  right: 20px;
+  transform: rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+#slide_close {
+  position: relative;
+  left: 0;
+  transform: rotate(90deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9575cd;
+  border-radius: 6px;
+  border: 3px solid #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3b3b3b;
 }
